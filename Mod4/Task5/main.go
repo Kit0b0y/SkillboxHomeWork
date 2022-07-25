@@ -33,10 +33,10 @@ func main() {
 			fmt.Println("Скидка по пятницам:", discont)
 		}
 	}
-	if dayWeek != 1 {
-	}
-	if dayWeek != 5 {
-	}
+	//if dayWeek != 1 {
+	//}
+	//if dayWeek != 5 {
+	//}
 	if numberGuest > 5 {
 		tips = checkAmmount * 10 / 100
 		fmt.Println("Надбавка за обслуживание:", tips)
