@@ -7,10 +7,14 @@ import (
 )
 
 func main() {
+	//var b bytes.Buffer
+
 	file, err := os.Open("file.txt")
 	if err != nil {
 		panic(err)
 	}
+	defer file.Close()
+
 	for {
 		inf, err := file.Stat()
 		if err != nil {
@@ -23,13 +27,9 @@ func main() {
 	}
 	defer file.Close()
 
-	data := make([]byte, 64)
-
-	for {
-		n, err := file.Read(data)
-		if err == io.EOF {
-			break
-		}
-		fmt.Print(string(data[:n]))
+	data, err := io.ReadAll(file)
+	if err != nil {
+		panic(err)
 	}
+	fmt.Print(string(data))
 }
