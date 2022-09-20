@@ -1,58 +1,38 @@
 package main
 
 import (
-	"bytes"
 	"fmt"
-	"io"
 	"math/rand"
-	"os"
 	"time"
 )
 
-func main() {
-	var b bytes.Buffer
+func firstFunc(x1, y1, x2, y2, x3, y3 int) {
 
+	fmt.Printf("Исходные значения: (%v, %v); (%v, %v); (%v, %v)\n", x1, y1, x2, y2, x3, y3)
+}
+
+func newPoint(x, y *int) {
+	*x = 2*(*x) + 10
+	*y = -3*(*y) - 5
+
+}
+
+func getRandom(n1, n2 int) (int, int) {
+	return rand.Intn(n1), rand.Intn(n2)
+
+}
+
+func main() {
 	rand.Seed(time.Now().UnixNano())
-	n := rand.Intn(101)
-	fmt.Println("Введите число от 1 до 100")
-	b.WriteString("Введите число от 1 до 100 \n")
-	for {
-		var answer int
-		for {
-			_, _ = fmt.Scan(&answer)
-			b.WriteString(fmt.Sprintf("Введите число %d \n", answer))
-			if answer < 1 || answer > 100 {
-				fmt.Println("Число должно быть в диапазоне от 1 до 100")
-				b.WriteString("Число должно быть в диапазоне от 1 до 100 \n")
-			} else {
-				break
-			}
-		}
-		if answer == n {
-			fmt.Println("Ура! Число угадано")
-			b.WriteString("Ура! Число угадано \n")
-			return
-		} else if answer < n {
-			fmt.Println("Загаданное число больше")
-			b.WriteString("Загаданное число больше \n")
-		} else {
-			fmt.Println("Загаданное число меньше")
-			b.WriteString("Загаданное число меньше \n")
-		}
-	}
-	fileName := "log.txt"
-	if err := os.WriteFile(fileName, b.Bytes(), 0666); err != nil {
-		panic(err)
-	}
-	file, err := os.Open(fileName)
-	if err != nil {
-		panic(err)
-	}
-	defer file.Close()
-	resultBytes, err := io.ReadAll(file)
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println("Сохраненный лог:")
-	fmt.Println(resultBytes)
+	x1, y1 := getRandom(10, 20)
+	x2, y2 := getRandom(10, 20)
+	x3, y3 := getRandom(10, 20)
+
+	firstFunc(x1, y1, x2, y2, x3, y3)
+
+	newPoint(&x1, &y1)
+	newPoint(&x2, &y2)
+	newPoint(&x3, &y3)
+	fmt.Printf("Новые значения: (%v, %v); (%v, %v); (%v, %v)\n", x1, y1, x2, y2, x3, y3)
+
 }
