@@ -13,11 +13,11 @@ func f1(num int) int {
 }
 
 func f2(num int) int {
-	return num + b
+	return num + b + c
 }
 
 func f3(num int) int {
-	return num + c
+	return num + a + b
 }
 
 func main() {
@@ -26,9 +26,5 @@ func main() {
 	fmt.Print("Enter number: ")
 	fmt.Scan(&num)
 
-	fmt.Printf("Result 1 (+10): %v\n", f1(num))
-	fmt.Printf("Result 2 (+200): %v\n", f2(num))
-	fmt.Printf("Result 3 (+3000): %v\n", f3(num))
-
-	fmt.Printf("Result (+ 10)+200)+3000): %v\n", f3(f2(f1(num))))
+	fmt.Printf("Result: %v\n", f3(f2(f1(num))))
 }
