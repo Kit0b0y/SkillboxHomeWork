@@ -1,38 +1,42 @@
 package main
 
-import (
-	"fmt"
-	"math/rand"
-	"time"
-)
+import "fmt"
 
-func firstFunc(x1, y1, x2, y2, x3, y3 int) {
+var evenCount, oddCount int
 
-	fmt.Printf("Исходные значения: (%v, %v); (%v, %v); (%v, %v)\n", x1, y1, x2, y2, x3, y3)
+func countEvenNums(evoddarr []int) int {
+	evenCount = 0
+	fmt.Print("nList of Even Numbers  = ")
+	for _, a := range evoddarr {
+		if a%2 == 0 {
+			fmt.Println(a, " ")
+			evenCount++
+		}
+	}
+	return evenCount
 }
-
-func newPoint(x, y *int) {
-	*x = 2*(*x) + 10
-	*y = -3*(*y) - 5
-
+func countOddNums(evoddarr []int) int {
+	oddCount = 0
+	fmt.Print("nList of Odd Numbers   = ")
+	for _, a := range evoddarr {
+		if a%2 != 0 {
+			fmt.Println(a, " ")
+			oddCount++
+		}
+	}
+	return oddCount
 }
-
-func getRandom(n1, n2 int) (int, int) {
-	return rand.Intn(n1), rand.Intn(n2)
-
-}
-
 func main() {
-	rand.Seed(time.Now().UnixNano())
-	x1, y1 := getRandom(10, 20)
-	x2, y2 := getRandom(10, 20)
-	x3, y3 := getRandom(10, 20)
-
-	firstFunc(x1, y1, x2, y2, x3, y3)
-
-	newPoint(&x1, &y1)
-	newPoint(&x2, &y2)
-	newPoint(&x3, &y3)
-	fmt.Printf("Новые значения: (%v, %v); (%v, %v); (%v, %v)\n", x1, y1, x2, y2, x3, y3)
-
+	var size int
+	fmt.Print("Enter the Even Odd Array Size = ")
+	fmt.Scan(&size)
+	evoddarr := make([]int, size)
+	fmt.Print("Enter the Even Odd Array Items  = ")
+	for i := 0; i < size; i++ {
+		fmt.Scan(&evoddarr[i])
+	}
+	evenCount = countEvenNums(evoddarr)
+	oddCount = countOddNums(evoddarr)
+	fmt.Println("nThe Total Number of Even Numbers = ", evenCount)
+	fmt.Println("The Total Number of Odd Numbers  = ", oddCount)
 }
