@@ -2,41 +2,35 @@ package main
 
 import "fmt"
 
-var evenCount, oddCount int
+const oRows = 3
+const oCols = 5
+const nCols = 4
 
-func countEvenNums(evoddarr []int) int {
-	evenCount = 0
-	fmt.Print("nList of Even Numbers  = ")
-	for _, a := range evoddarr {
-		if a%2 == 0 {
-			fmt.Println(a, " ")
-			evenCount++
+func multiMat(m1 [oRows][oCols]int64, m2 [oCols][nCols]int64) [oRows][nCols]int64 {
+	var m [oRows][nCols]int64
+	for i := 0; i < oRows; i++ {
+		for j := 0; j < nCols; j++ {
+			for k := 0; k < oCols; k++ {
+				m[i][j] = m[i][j] + m1[i][k]*m2[k][j]
+			}
 		}
 	}
-	return evenCount
+	return m
 }
-func countOddNums(evoddarr []int) int {
-	oddCount = 0
-	fmt.Print("nList of Odd Numbers   = ")
-	for _, a := range evoddarr {
-		if a%2 != 0 {
-			fmt.Println(a, " ")
-			oddCount++
-		}
-	}
-	return oddCount
-}
+
 func main() {
-	var size int
-	fmt.Print("Enter the Even Odd Array Size = ")
-	fmt.Scan(&size)
-	evoddarr := make([]int, size)
-	fmt.Print("Enter the Even Odd Array Items  = ")
-	for i := 0; i < size; i++ {
-		fmt.Scan(&evoddarr[i])
+
+	m2 := [oCols][nCols]int64{
+		{10, 20, 30, 40},
+		{11, 22, 33, 44},
+		{55, 66, 77, 88},
+		{21, 32, 43, 54},
+		{16, 15, 32, 45},
 	}
-	evenCount = countEvenNums(evoddarr)
-	oddCount = countOddNums(evoddarr)
-	fmt.Println("nThe Total Number of Even Numbers = ", evenCount)
-	fmt.Println("The Total Number of Odd Numbers  = ", oddCount)
+	m1 := [oRows][oCols]int64{
+		{5, 4, 6, 3, 6},
+		{54, 56, 43, 89, 58},
+		{34, 81, 72, 83, 74},
+	}
+	fmt.Println(multiMat(m1, m2))
 }
