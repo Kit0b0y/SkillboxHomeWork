@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/kit0b0y/skillboxhomeWork/newskillbox/28/pkg/storage"
+	"github.com/kit0b0y/skillboxhomework/newskillbox/28/pkg/storage"
 	"github.com/kit0b0y/skillboxhomework/newskillbox/28/pkg/student"
 )
 
