@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/sanosit/sanosit_golang/skillbox/28/pkg/storage"
-	"github.com/sanosit/sanosit_golang/skillbox/28/pkg/student"
+	"github.com/Kit0b0y/SkillboxHomeWork/NewSkillbox/28/pkg/storage"
+	"github.com/Kit0b0y/SkillboxHomeWork/NewSkillbox/28/pkg/student"
 )
 
 func main() {
