@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/Kit0b0y/SkillboxHomeWork/NewSkillbox/28/pkg/storage"
-	"github.com/Kit0b0y/SkillboxHomeWork/NewSkillbox/28/pkg/student"
+	"github.com/kit0b0y/skillboxhomeWork/newskillbox/28/pkg/storage"
+	"github.com/kit0b0y/skillboxhomework/newskillbox/28/pkg/student"
 )
 
 func main() {
