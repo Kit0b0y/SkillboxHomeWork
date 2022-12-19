@@ -3,7 +3,7 @@ package storage
 import (
 	"fmt"
 
-	"github.com/Kit0b0y/SkillboxHomeWork/NewSkillbox/28/pkg/student"
+	"github.com/kit0b0y/skillboxhomework/newskillbox/28/pkg/student"
 )
 
 type StudentStorage map[string]*student.Student
