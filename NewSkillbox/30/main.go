@@ -96,7 +96,6 @@ func makeFriends(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// судя по формулировке "X и Y теперь друзья", дружба транзитивна
 	storage[tgt].addFriend(src)
 
 	fmt.Fprintf(w, "%s и %s теперь друзья\n", u.Name, storage[tgt].Name)
