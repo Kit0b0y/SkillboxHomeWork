@@ -6,10 +6,10 @@ import (
 	"os/signal"
 	"syscall"
 
-	cities "github.com/kuzminprog/cities_information_service"
-	"github.com/kuzminprog/cities_information_service/internal/handler"
-	"github.com/kuzminprog/cities_information_service/internal/repository"
-	"github.com/kuzminprog/cities_information_service/internal/service"
+	cities "github.com/Kit0b0y/SkillboxHomeWork/NewSkillbox/Interim certification"
+	"github.com/Kit0b0y/SkillboxHomeWork/NewSkillbox/Interim certification/internal/handler"
+	"github.com/Kit0b0y/SkillboxHomeWork/NewSkillbox/Interim certification/internal/repository"
+	"github.com/Kit0b0y/SkillboxHomeWork/NewSkillbox/Interim certification/internal/service"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/viper"
 )

@@ -9,7 +9,7 @@ import (
 	"unicode"
 
 	"github.com/go-chi/chi/v5"
-	cities "github.com/kuzminprog/cities_information_service"
+	cities "github.com/Kit0b0y/SkillboxHomeWork/NewSkillbox/Interim certification"
 	"github.com/rs/zerolog/log"
 )
 
