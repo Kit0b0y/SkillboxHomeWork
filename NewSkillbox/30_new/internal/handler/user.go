@@ -3,11 +3,12 @@ package handler
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/go-chi/chi/v5"
 	"io/ioutil"
 	"net/http"
 	"strings"
 
-	user_app "github.com/kuzminprog/skillbox_golang/tree/main/30"
+	user_app "github.com/kit0b0y/skillboxHomeWork/NewSkillbox/30_new"
 	"github.com/rs/zerolog/log"
 )
 

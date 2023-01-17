@@ -2,9 +2,9 @@ package repository
 
 import (
 	"context"
-	"strconv"
-
+	"github.com/go-redis/redis/v8"
 	"github.com/spf13/viper"
+	"strconv"
 )
 
 type DataBase struct {

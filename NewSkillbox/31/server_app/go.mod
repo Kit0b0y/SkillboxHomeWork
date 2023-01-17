@@ -1,4 +1,4 @@
-module github.com/kuzminprog/skillbox_golang/tree/main/30
+module github.com/kit0b0y/skillboxHomeWork/NewSkillbox/30_new
 
 go 1.19
 

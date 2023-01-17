@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"github.com/kuzminprog/skillbox_golang/tree/main/30/internal/service"
+	"github.com/kit0b0y/skillboxHomeWork/NewSkillbox/30_new/internal/service"
 )
 
 type Handler struct {
