@@ -1,8 +1,8 @@
 package service
 
 import (
-	cities "github.com/kuzminprog/cities_information_service"
-	"github.com/kuzminprog/cities_information_service/internal/repository"
+	cities "github.com/Kit0b0y/SkillboxHomeWork/NewSkillbox/Interim_certification"
+	"github.com/Kit0b0y/SkillboxHomeWork/NewSkillbox/Interim_certification/internal/repository"
 )
 
 type City interface {

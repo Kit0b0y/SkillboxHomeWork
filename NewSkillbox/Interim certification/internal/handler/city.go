@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"unicode"
 
+	cities "github.com/Kit0b0y/SkillboxHomeWork/NewSkillbox/Interim_certification"
 	"github.com/go-chi/chi/v5"
-	cities "github.com/Kit0b0y/SkillboxHomeWork/NewSkillbox/Interim certification"
 	"github.com/rs/zerolog/log"
 )
 
