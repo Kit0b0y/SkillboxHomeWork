@@ -2,10 +2,9 @@ package handler
 
 import (
 	"encoding/json"
-	"net/http"
-
-	"github.com/kuzminprog/service-provider-system/pkg/sps"
+	"github.com/Kit0b0y/SkillboxHomeWork/NewSkillbox/Final/pkg/sps"
 	"github.com/spf13/viper"
+	"net/http"
 )
 
 func InitRoutes() *chi.Mux {

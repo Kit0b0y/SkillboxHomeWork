@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/kuzminprog/service-provider-system/include/handler"
+	"github.com/Kit0b0y/SkillboxHomeWork/NewSkillbox/Final/include/handler"
 )
 
 // StartServer() - starts the server with the specified address and port
