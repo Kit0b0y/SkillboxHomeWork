@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/go-chi/chi/v5 v5.0.7
-	github.com/kuzminprog/cities_information_service v0.0.0-20221126222009-7dd507666ee3
+	//github.com/kuzminprog/cities_information_service v0.0.0-20221126222009-7dd507666ee3
 	github.com/rs/zerolog v1.28.0
 	github.com/spf13/viper v1.14.0
 )
