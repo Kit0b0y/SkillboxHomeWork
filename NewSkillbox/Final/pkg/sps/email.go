@@ -2,7 +2,7 @@ package sps
 
 import (
 	"bufio"
-	"io/ioutil"
+	"io"
 	"os"
 	"sort"
 	"strconv"
@@ -29,7 +29,7 @@ func GetStatusEmail(csvPath string) ([]EmailData, error) {
 		return []EmailData{}, err
 	}
 
-	content, err := ioutil.ReadAll(file)
+	content, err := io.ReadAll(file)
 	if err != nil {
 		return []EmailData{}, err
 	}

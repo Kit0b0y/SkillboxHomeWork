@@ -2,7 +2,7 @@ package sps
 
 import (
 	"bufio"
-	"io/ioutil"
+	"io"
 	"os"
 	"strconv"
 	"strings"
@@ -38,7 +38,7 @@ func GetStatusVoice(csvPath string) ([]VoiceCallData, error) {
 		return []VoiceCallData{}, err
 	}
 
-	content, err := ioutil.ReadAll(file)
+	content, err := io.ReadAll(file)
 	if err != nil {
 		return []VoiceCallData{}, err
 	}
